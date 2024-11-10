@@ -8,9 +8,7 @@ const io = require('socket.io')(http);
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/publicChatApp', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+mongoose.connect('mongodb://mongodb:27017/publicChatApp', {
 }).then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
